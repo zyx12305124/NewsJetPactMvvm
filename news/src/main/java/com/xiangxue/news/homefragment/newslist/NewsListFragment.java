@@ -52,7 +52,7 @@ public class NewsListFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         viewDataBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_news, container, false);
-        mAdapter = new NewsListRecyclerViewAdapter(getContext());
+        mAdapter = new NewsListRecyclerViewAdapter();
         viewDataBinding.listview.setHasFixedSize(true);
         viewDataBinding.listview.setLayoutManager(new LinearLayoutManager(getContext()));
         viewDataBinding.listview.setAdapter(mAdapter);

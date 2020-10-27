@@ -40,6 +40,10 @@ public abstract class BaseCustomView<VIEW extends ViewDataBinding,DATA extends B
         init();
     }
 
+
+    /**
+     * 初始化view 把databinding拿进来
+     */
     public void init(){
         LayoutInflater inflater = (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         binding = DataBindingUtil.inflate(inflater,getLayoutId(),this,false);
